@@ -96,8 +96,8 @@ const baseConfig: Webpack.Configuration = {
     new WindiCSSWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: isDevelopment
-        ? 'styles/main.css'
-        : 'styles/main.[contenthash:20].css',
+        ? 'css/main.css'
+        : 'css/main.[contenthash:20].css',
     }),
     // new CopyWebpackPlugin({
     //   patterns: [
@@ -115,7 +115,7 @@ const baseConfig: Webpack.Configuration = {
         year: new Date().getFullYear(),
       },
       template: utils.resolve('src/index.html'),
-      inject: true,
+      inject: 'body',
       minify: {
         removeComments: !isDevelopment,
         collapseWhitespace: !isDevelopment,
