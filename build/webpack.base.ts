@@ -4,6 +4,7 @@ import CopyWebpackPlugin from 'copy-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ProgressBarPlugin from 'progress-bar-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import WindiCSSWebpackPlugin from 'windicss-webpack-plugin';
 
 import * as utils from './utils';
 import * as config from './config';
@@ -92,6 +93,7 @@ const baseConfig: Webpack.Configuration = {
     new Webpack.DefinePlugin({
       'process.env.NODE_ENV': isDevelopment ? '"development"' : '"production"',
     }),
+    new WindiCSSWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: isDevelopment
         ? 'styles/main.css'
