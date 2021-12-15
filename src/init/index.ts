@@ -1,9 +1,11 @@
-import React from 'react';
 import 'core-js/stable';
 
 import { render } from 'react-dom';
+import { createElement } from 'react';
+
+import { App } from 'src/components/app';
 
 render(
-  <div>初始化</div>,
+  createElement(App),
   document.getElementById('root')!,
 );
