@@ -8,6 +8,7 @@
     "ts-node": "ts-node -P ./build/tsconfig.json --transpile-only",
     "watch": "cross-env NODE_ENV=development npm run ts-node ./build/webpack.dev.ts",
     "build": "cross-env NODE_ENV=production npm run ts-node ./build/webpack.prod.ts",
+    "build:analyze": "cross-env NODE_ENV=production Analyze=true npm run ts-node ./build/webpack.prod.ts",
     "lint": "eslint --quiet --no-error-on-unmatched-pattern --config ./.eslintrc.js src/**/*.{ts,tsx,js,jsx}",
     "lint:fix": "eslint --fix --quiet --no-error-on-unmatched-pattern --config ..eslintrc.js src/**/*.{ts,tsx,js,jsx}"
   },

@@ -40,9 +40,11 @@ baseConfig.performance = {
   maxEntrypointSize: 512000,
 };
 
-baseConfig.plugins = baseConfig.plugins?.concat(
-  new (BundleAnalyzerPlugin as any)(),
-);
+if (process.env.Analyze === 'true') {
+  baseConfig.plugins = baseConfig.plugins?.concat(
+    new (BundleAnalyzerPlugin as any)(),
+  );
+}
 
 // 删除输出文件夹
 if (fs.existsSync(config.output)) {

@@ -62,7 +62,7 @@ jobs:
       - name: Check Code Style
         run: pnpm run lint
 
-      - name: Build All Packages
+      - name: Build App
         run: pnpm run build
 
       - name: Deploy
