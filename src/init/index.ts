@@ -1,4 +1,5 @@
 import 'windi.css';
+import 'src/styles';
 import 'core-js/stable';
 
 import { render } from 'react-dom';
