@@ -17,7 +17,7 @@ jobs:
         node:
           - '14'
         platform:
-          - windows-latest
+          - ubuntu-latest
         storeDir:
          - '\.pnpm-store'
 
@@ -41,8 +41,7 @@ jobs:
 
       - name: Install pnpm
         run: |
-          npm install --g pnpm
-          pnpm --version
+          npm install -g pnpm@6.23.1
 
       - name: Set Cache Directory
         run: 'pnpm config set store-dir ${{ matrix.storeDir }}'
