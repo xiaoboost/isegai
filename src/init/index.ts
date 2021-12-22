@@ -1,5 +1,5 @@
 import 'windi.css';
-import 'src/styles';
+import 'src/styles/index.css';
 import 'core-js/stable';
 
 import { render } from 'react-dom';
@@ -9,5 +9,5 @@ import { App } from 'src/components/app';
 
 render(
   createElement(App),
-  document.getElementById('root')!,
+  document.getElementById('root'),
 );

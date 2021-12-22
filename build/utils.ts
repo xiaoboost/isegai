@@ -1,5 +1,4 @@
 import path from 'path';
-import Webpack from 'webpack';
 
 /** 当前版本号 */
 export { version } from '../package.json';
@@ -27,27 +26,4 @@ export const build = buildTag();
  */
 export function resolve(...dir: string[]) {
   return path.join(__dirname, '..', ...dir).replace(/[\\/]/g, '/');
-}
-
-export function compile(config: Webpack.Configuration, message: string) {
-  Webpack(config, (err, stats) => {
-    console.log('\x1Bc');
-
-    if (err) {
-      throw err;
-    }
-
-    if (stats) {
-      console.log(stats.toString({
-        chunks: false,
-        chunkModules: false,
-        chunkOrigins: false,
-        colors: true,
-        modules: false,
-        children: false,
-      }));
-
-      console.log(`\n  ${message}\n`);
-    }
-  });
 }
