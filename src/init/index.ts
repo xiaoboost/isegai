@@ -1,4 +1,4 @@
-import 'windi.css';
+import 'virtual:windi.css';
 import 'src/styles/index.css';
 import 'core-js/stable';
 
